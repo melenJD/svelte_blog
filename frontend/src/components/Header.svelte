@@ -1,14 +1,41 @@
+<script>
+  import { link } from 'svelte-spa-router';
+</script>
+
 <header>
   <div class="header-left">
-    <p>Hello?</p>
+    <a href="/" use:link>Melen.kr</a>
   </div>
   <div class="header-right">
-    <p>Right</p>
+    <a href="/login" use:link>Sign in</a>
   </div>
 </header>
 
 <style>
+  header {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+  }
+
   .header-left {
-    color: red;
+    margin-right: auto;
+    margin-left: 100px;
+  }
+
+  .header-left a {
+    font-size: 2rem;
+    border-radius: 5px;
+  }
+
+  .header-right {
+    margin-left: auto;
+    margin-right: 100px;
+  }
+
+  .header-right a {
+    padding: .5rem 1rem;
+    background-color: rgb(255, 31, 98);
+    display: block;
   }
 </style>
