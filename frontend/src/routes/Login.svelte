@@ -1,29 +1,19 @@
 <article> 
   <section>
-    <div class="container">
-      <h1 class="title">Login</h1>
-    </div>
-    <div class="container">
-      <form>
-        <label for="userid">Account</label>
-        <input type="text" name="userid" id="userid">
-        <label for="userpw">Password</label>
-        <input type="password" name="userpw" id="userpw">
-        <input type="submit" value="로그인">
-      </form>
-    </div>
+    <h1 class="title serif">Login</h1>
+  </section>
+  <section>
+    <form>
+      <label for="userid">Account</label>
+      <input type="text" name="userid" id="userid">
+      <label for="userpw">Password</label>
+      <input type="password" name="userpw" id="userpw">
+      <input type="submit" value="로그인">
+    </form>
   </section>
 </article>
 
 <style>
-  :global(.container h1.title) {
-    font-size: 6rem;
-    letter-spacing: -2px;
-    text-shadow: -5px 0px 0px rgb(18, 21, 211),
-                  5px 0px 0px rgb(211, 18, 121);
-    font-family: 'Dancing Script';
-  }
-
   form {
     width: 300px;
     margin-left: auto;

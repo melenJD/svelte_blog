@@ -16,15 +16,4 @@
     align-items: center;
     padding: 1rem 0;
   }
-
-  :global(nav a) {
-    padding: .2rem .8rem;
-    border-radius: 3px;
-    margin: 0 .2rem;
-    background-color: rgb(44, 44, 44);
-  }
-
-  :global(nav a.active) {
-    background-color: rgb(255, 31, 98);
-  }
 </style>

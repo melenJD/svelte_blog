@@ -7,7 +7,7 @@
     <a href="/" use:link>Melen.kr</a>
   </div>
   <div class="header-right">
-    <a href="/login" use:link>Sign in</a>
+    <a href="/login" use:link><i class="xi-user"></i> Sign in</a>
   </div>
 </header>
 
@@ -37,5 +37,6 @@
     padding: .5rem 1rem;
     background-color: rgb(255, 31, 98);
     display: block;
+    border-radius: 5px;
   }
 </style>

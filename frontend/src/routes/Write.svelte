@@ -1,7 +1,5 @@
 <article>
   <section>
-    <div class="container">
-      <h1 class="title">Writer</h1>
-    </div>
+    <h1 class="title serif">Writer</h1>
   </section>
 </article>
