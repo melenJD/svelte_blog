@@ -41,12 +41,13 @@
     margin: .5rem;
     text-align: left;
     word-break: break-all;
+    font-size: .8rem;
   }
 
   .smallbox .title {
     margin: .5rem;
     text-align: left;
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
 </style>

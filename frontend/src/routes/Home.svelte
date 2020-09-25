@@ -2,6 +2,11 @@
   import SmallBox from '../components/smallBox.svelte';
   import Slider from '../components/slider.svelte';
   import { link } from 'svelte-spa-router';
+
+  let items = [
+    {title: '파국', content: '파아아국이다'},
+    {title: '드리퍼', content: '드리리이이이이입'}
+  ]
 </script>
 
 <article>
@@ -13,7 +18,9 @@
   </section>
   <section>
     <a href="/post" use:link>
-      <SmallBox title={"제목1"} content={"ABC Market"} />
+      {#each items as item}
+        <SmallBox title={item.title} content={item.content} />
+      {/each}
     </a>
   </section>
 </article>

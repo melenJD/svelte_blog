@@ -4,10 +4,10 @@
 </script>
 
 <div class="slider">
-    <Carousel perPage={1} autoplay={10000} duration={1000}>
-        <SliderItem/>
-        <SliderItem/>
-        <SliderItem/>
+    <Carousel perPage={1} autoplay={0} duration={1000}>
+        <SliderItem image_link={'../images/slider01.jpg'}/>
+        <SliderItem image_link={'../images/slider02.jpg'}/>
+        <SliderItem image_link={'../images/slider03.jpg'}/>
     </Carousel>
 </div>
 

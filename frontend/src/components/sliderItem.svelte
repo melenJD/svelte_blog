@@ -1,5 +1,5 @@
 <script>
-  export let image_link = '../images/slider01.jpg';
+  export let image_link;
 </script>
 
 <div class="slider-item">

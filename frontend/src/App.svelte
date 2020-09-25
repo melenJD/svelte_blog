@@ -28,7 +28,12 @@
 		background-color: rgb(255, 31, 98);
 	}
 
+	:global(nav a:hover) {
+		box-shadow: 0 0 0 1px rgb(255, 31, 98) inset;
+	}
+
 	:global(.serif) {
-		font-family: 'Dancing Script', 'YiSunShinRegular', serif;
+		font-family: 'Dancing Script', 'Nanum Pen Script', serif;
+		font-weight: 400;
 	}
 </style>
