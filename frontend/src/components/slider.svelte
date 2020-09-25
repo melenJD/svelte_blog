@@ -22,4 +22,10 @@
         background-color: #111;
         overflow: hidden;
     }
+
+    @media screen and (max-width: 768px) {
+        .slider {
+            width: 100%;
+        }
+    }
 </style>

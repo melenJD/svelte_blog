@@ -39,4 +39,20 @@
     display: block;
     border-radius: 5px;
   }
+
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+
+    .header-right,
+    .header-left {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-right {
+      margin-top: 1rem;
+    }
+  }
 </style>

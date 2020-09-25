@@ -14,7 +14,7 @@
 <style>
   .slider-item {
     position: relative;
-    width: 720px;
+    width: 100%;
     height: 250px;
   }
 
