@@ -5,7 +5,7 @@
 
     let items = [];
 
-    fetch('http://melen.kr/post/slide', {
+    fetch('/post/slide', {
         method: 'POST'
     }).then(function(response) {
         return response.json();

@@ -16,7 +16,7 @@
 
   function writePost() {
     showLoadingPage.set(true);
-    fetch('http://melen.kr/post/write', {
+    fetch('/post/write', {
       method: 'POST',
       body: JSON.stringify({
         title: title,

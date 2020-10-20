@@ -4,7 +4,7 @@
   
   let data = [];
 
-  fetch(`http://melen.kr/post/page/1`, {
+  fetch(`/post/page/1`, {
     method: 'POST'
   }).then(function(response) {
     return response.json();
