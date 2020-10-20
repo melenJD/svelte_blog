@@ -37,6 +37,15 @@ postRouter.post('/page/:id', async (req, res) => {
   })
 })
 
+postRouter.post('/remove/:id', async (req, res) => {
+  const id = req.params.id;
+  const r = await doQuery('DELETE FROM posts WHERE id=?', [id]);
+
+  res.send({
+    data: r
+  })
+})
+
 postRouter.post('/:id', async (req, res) => {
   const id = req.params.id;
   const r = await doQuery('SELECT title, content FROM posts WHERE id = ?', [id]);

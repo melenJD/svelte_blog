@@ -7,13 +7,12 @@
 
   fetch('http://localhost:9090/post/top5',{
     method: 'POST'
+  }).then(function(response) {
+    return response.json();
   })
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(json) {
-      items = json.data;
-    })
+  .then(function(json) {
+    items = json.data;
+  })
 </script>
 
 <article>
