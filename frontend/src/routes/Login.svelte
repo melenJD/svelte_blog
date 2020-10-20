@@ -23,7 +23,7 @@ import { push } from 'svelte-spa-router';
     if (name != '' && pass != '') {
       e.preventDefault();
       showLoadingPage.set(true);
-      fetch(`http://localhost:9090/auth/login?name=${name}&password=${pass}`,{
+      fetch(`http://localhost/auth/login?name=${name}&password=${pass}`,{
         method: 'POST'
       }).then(function (response) {
         return response.json();

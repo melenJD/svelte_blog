@@ -7,7 +7,7 @@
   let title = 'Title';
   let content = 'loading...';
 
-  fetch(`http://localhost:9090/post/${params.id}`,{
+  fetch(`http://localhost/post/${params.id}`,{
     method: 'POST'
   }).then(function(response) {
       return response.json();
@@ -17,7 +17,7 @@
   })
 
   function removeThis() {
-    fetch(`http://localhost:9090/post/remove/${params.id}`,{
+    fetch(`http://localhost/post/remove/${params.id}`,{
       method: 'POST'
     }).then(function(response) {
       return response.json();

@@ -11,14 +11,17 @@ if (app) {
   console.log('web server app loaded');
 }
 
-const PORT = 9090;
+const PORT = 80;
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(express.static(__dirname + '/public'));
 
 app.use(cors());
 
-app.use('/', router);
+app.get('/', (req, res) => {
+  res.sendFile('index.html');
+})
 app.use('/auth', authRouter);
 app.use('/post', postRouter);
 
