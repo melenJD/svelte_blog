@@ -1,13 +1,15 @@
 <script>
   export let image_link;
+  export let title;
+  export let content;
 </script>
 
 <div class="slider-item">
   <div class="slider-image" style="background-image: url('{image_link}')"></div>
   <div class="slider-background" />
   <div class="slider-content">
-    <p class="title serif">Hi 안녕</p>
-    <p class="content">안녕하세요</p>
+    <p class="title serif">{title}</p>
+    <p class="content">{content}</p>
   </div>
 </div>
 

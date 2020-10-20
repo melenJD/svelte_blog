@@ -3,11 +3,26 @@
 	import routes from './routes';
 	import Nav from './components/Nav.svelte';
 	import Header from './components/Header.svelte';
+	import LoadingPage from './components/LoadingPage.svelte';
+	import ErrorPage from './components/ErrorPage.svelte';
+	import Footer from './components/Footer.svelte';
+
+	import { showLoadingPage, errorPage } from '../store.js';
 </script>
 
-<Header/>
-<Nav/>
-<Router {routes}/>
+{#if $showLoadingPage}
+	<LoadingPage/>
+{/if}
+{#if $errorPage}
+	<ErrorPage/>
+{/if}
+
+<div class="content" class:scrolllock={$showLoadingPage || $errorPage}>
+	<Header/>
+	<Nav/>
+	<Router {routes}/>
+	<Footer/>
+</div>
 
 <style>
 	:global(section > h1.title) {
@@ -35,5 +50,11 @@
 	:global(.serif) {
 		font-family: 'Dancing Script', 'Nanum Pen Script', serif;
 		font-weight: 400;
+	}
+
+	:global(.scrolllock) {
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
 	}
 </style>

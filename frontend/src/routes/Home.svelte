@@ -3,10 +3,17 @@
   import Slider from '../components/slider.svelte';
   import { link } from 'svelte-spa-router';
 
-  let items = [
-    {title: '파국', content: '파아아국이다'},
-    {title: '드리퍼', content: '드리리이이이이입'}
-  ]
+  let items = [];
+
+  fetch('http://localhost:9090/post/top5',{
+    method: 'POST'
+  })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      items = json.data;
+    })
 </script>
 
 <article>
@@ -16,14 +23,18 @@
   <section>
     <Slider/>
   </section>
-  <section>
-    <a href="/post" use:link>
-      {#each items as item}
+  <section id="box-newPost">
+    {#each items as item, idx}
+      <a href="/post/{item.id}" use:link>
         <SmallBox title={item.title} content={item.content} />
-      {/each}
-    </a>
+      </a>
+    {/each}
   </section>
 </article>
 
 <style>
+  #box-newPost {
+    display: flex;
+    justify-content: center;
+  }
 </style>

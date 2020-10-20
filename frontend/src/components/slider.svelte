@@ -1,13 +1,22 @@
 <script>
     import SliderItem from './sliderItem.svelte';
     import Carousel from '@beyonk/svelte-carousel';
+    import { link } from 'svelte-spa-router';
+
+    let items = [];
+
+    fetch('http://localhost:9090/post/slide', {
+        method: 'POST'
+    }).then(function(response) {
+        return response.json();
+    }).then(function(json) {
+        items = json.data;
+    })
 </script>
 
 <div class="slider">
     <Carousel perPage={1} autoplay={0} duration={1000}>
-        <SliderItem image_link={'../images/slider01.jpg'}/>
-        <SliderItem image_link={'../images/slider02.jpg'}/>
-        <SliderItem image_link={'../images/slider03.jpg'}/>
+        <a href="/post/27" use:link><SliderItem image_link={'../images/slider01.jpg'} title={items.title} content={items.content}/></a>
     </Carousel>
 </div>
 

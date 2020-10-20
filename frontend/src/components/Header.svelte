@@ -1,5 +1,15 @@
 <script>
+import { push } from 'svelte-spa-router';
+
   import { link } from 'svelte-spa-router';
+  import { isLogin, username, nickname } from '../../store.js';
+
+  function logout() {
+    isLogin.set(false);;
+    username.set('');
+    nickname.set('');
+    push('/');
+  }
 </script>
 
 <header>
@@ -7,7 +17,12 @@
     <a href="/" use:link>Melen.kr</a>
   </div>
   <div class="header-right">
-    <a href="/login" use:link><i class="xi-user"></i> Sign in</a>
+    {#if !($isLogin)}
+      <a href="/login" class="btn" use:link><i class="xi-user"></i> Sign in</a>
+    {:else}
+      <span class="mr-4">{$nickname} [{$username}] 님 환영합니다!</span>
+      <span class="btn" on:click={logout}><i class="xi-user"></i> Sign Out</span>
+    {/if}
   </div>
 </header>
 
@@ -33,11 +48,21 @@
     margin-right: 100px;
   }
 
-  .header-right a {
+  .header-right a,
+  .header-right span {
+    color: white;
+  }
+
+  .btn {
+    cursor: pointer;
     padding: .5rem 1rem;
     background-color: rgb(255, 31, 98);
-    display: block;
+    display: inline-block;
     border-radius: 5px;
+  }
+
+  .mr-4 {
+    margin-right: 1rem;
   }
 
   @media screen and (max-width: 768px) {

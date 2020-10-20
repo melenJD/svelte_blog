@@ -49,5 +49,19 @@
     text-align: left;
     font-size: 1.2rem;
     font-weight: 500;
+    height: 1.2em;
+  }
+
+  .smallbox .title p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .smallbox .content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    max-height: 4.8rem;
   }
 </style>
